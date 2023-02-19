@@ -10,8 +10,9 @@ cd project_name
 ```
 # init yarn project and install hardhat
 yarn init
-# select typescript
 yarn add --dev hardhat
+# 
+yarn hardhat
 ```
 
 Delete the Lock.sol contract, create a new file ContractExemple.sol, write your own smart contract
