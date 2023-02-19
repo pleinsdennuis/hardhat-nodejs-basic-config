@@ -10,13 +10,11 @@ const errHTML = document.getElementById('err');
 ws.onopen = () => console.log('connected');
 
 ws.onmessage = event => {
+	// handle message from server here
 	const data = JSON.parse(event.data);
 }
 
-ws.onclose = () => console.log('disconnected');
-
-submitBtn.addEventListener('click', e => {
-	if (ws.readyState === WebSocket.OPEN) {
-		ws.send(JSON.stringify({data:'1'}))
-	}
+ws.onclose = () => {
+	console.log('disconnected');
+}
 });
